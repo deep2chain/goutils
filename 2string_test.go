@@ -9,7 +9,7 @@ var (
 	a = 123
 	b = []int{1, 2, 3}
 	c = 1.23
-	d = 0x111
+	// d = 0x111
 )
 
 func Test2StringEx(t *testing.T) {

@@ -2,6 +2,7 @@ package goutils
 
 import (
 	"fmt"
+	"strings"
 	"testing"
 )
 
@@ -11,7 +12,7 @@ func TestRunScripts(t *testing.T) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	if result != hello {
-		t.Errorf("expected true")
+	if strings.Trim(result, "\n") != hello {
+		t.Errorf("result expected %v", hello)
 	}
 }

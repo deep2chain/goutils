@@ -9,10 +9,7 @@ func Type(value interface{}) reflect.Kind {
 }
 
 func IsInstance(value interface{}, kind reflect.Kind) bool {
-	if Type(value) == kind {
-		return true
-	}
-	return false
+	return Type(value) == kind
 }
 
 func IsString(value interface{}) bool {

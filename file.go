@@ -7,10 +7,7 @@ import (
 
 func FileExists(path string) bool {
 	_, err := os.Open(path)
-	if errors.Is(err, os.ErrNotExist) {
-		return false
-	}
-	return true
+	return !errors.Is(err, os.ErrNotExist)
 }
 
 func FileOpen(path string) (*os.File, error) {
